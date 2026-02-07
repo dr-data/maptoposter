@@ -1,4 +1,5 @@
 name: Generate Hong Kong Maps
+# Workflow to generate Hong Kong maps with all available themes
 
 on:
   workflow_dispatch:  # Allows manual triggering
