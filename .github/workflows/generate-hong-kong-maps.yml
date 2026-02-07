@@ -44,6 +44,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add hk/*.png
           git diff --quiet && git diff --staged --quiet || git commit -m "Add generated Hong Kong maps"
+          git pull --rebase origin ${{ github.head_ref || github.ref_name }}
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
